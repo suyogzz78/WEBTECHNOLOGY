@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Append Child</title>
+</head>
+<body>
+    <h2>Dynamic Creation of Elements</h2>
+    <button onclick="createMore()" id="addButton">Add More +</button>
+    <div id="imageContainer"></div>
+</body>
+<script>
+    let buttonCount = 0; // Counter for dynamically created buttons
+
+    function createMore() {
+        if (buttonCount < 10) {
+            var divelement = document.createElement("div");
+            document.body.appendChild(divelement);
+
+            var newbtn = document.createElement("button");
+            newbtn.style.margin = "10px";
+            newbtn.innerText = "Button " + (buttonCount + 1);
+
+            divelement.appendChild(newbtn);
+            buttonCount++; 
+        }
+    }
+
+    document.getElementById("addButton").addEventListener("click", createimageTag);
+
+    function createimageTag() {
+        var imgtag = document.createElement("img");
+        imgtag.setAttribute("src", "cr7.jpg");
+        imgtag.setAttribute("alt", "CR7 Image");
+        imgtag.style.width = "200px"; 
+        imgtag.style.marginTop = "10px"; 
+
+        var divtag = document.getElementById("imageContainer");
+        divtag.appendChild(imgtag);
+    }
+</script>
+</html>

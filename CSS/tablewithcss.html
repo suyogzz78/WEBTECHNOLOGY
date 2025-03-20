@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablewithcss</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    tr:hover{
+        background-color: rgb(14, 79, 136);
+    }
+    tr:nth-child(even){
+        background-color: pink;
+    }
+
+</style>
+<body>
+    <table border="2px">
+        <th>name</th>
+        <th>address</th>
+        <th>salary</th>
+        <tr>
+            <td>suyog</td>
+            <td>kupondole</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>suyog</td>
+            <td>kupondole</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>kshitiz</td>
+            <td>bardiya</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>sujit</td>
+            <td>kupondole</td>
+            <td>60000</td>
+        </tr>
+
+        <tr>
+            <td>sobit</td>
+            <td>kalanki</td>
+            <td>504000</td>
+        </tr>
+        <tr>
+            <td>diyog</td>
+            <td>kupondole</td>
+            <td>500001</td>
+        </tr>
+        <tr>
+            <td>bibash</td>
+            <td>jawalakhel</td>
+            <td>9000</td>
+        </tr>
+        <tr>
+            <td>kapil</td>
+            <td>bara</td>
+            <td>5000000</td>
+        </tr>
+        <tr>
+            <td>kshitiz</td>
+            <td>kupondole</td>
+            <td>7000</td>
+        </tr>
+        <tr>
+            <td>forgg</td>
+            <td>kupondole</td>
+            <td>80000</td>
+        </tr>
+    </table>
+</body>
+<script>
+   var sal= document.querySelectorAll("table tr td:nth-child(3)")
+   for (i=0;i<sal.length;i++){
+    if(sal[i].innerText>50000)
+    sal[i].style.background="green"
+    sal[i].style.color="red"
+   }
+</script>
+<script>
+  
+</script>
+</html>

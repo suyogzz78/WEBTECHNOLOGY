@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <script>
+        var roll = [20, 45, 56, 54, 89, 7, 8, 25, 32, 59, 7];
+        document.write("Length = " + roll.length + "<br>");
+        document.write("Sorted array: " + roll.sort((a, b) => a - b) + "<br><br>");
+        
+        // Function to check if a number is prime
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        // Array to store prime numbers
+        var primes = [];
+
+        // Function to push prime numbers in the range [n:m] into the array
+        function findPrimes(n, m) {
+            for (let i = n; i <= m; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+        }
+
+        // Example usage
+        var n = 2;
+        var m = 50;
+        findPrimes(n, m);
+        
+        document.write("Prime numbers between " + n + " and " + m + ": " + primes.join(", "));
+    </script>
+</body>
+</html>

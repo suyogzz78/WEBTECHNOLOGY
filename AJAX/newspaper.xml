@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER SYSTEM "newspaper.dtd">
+<NEWSPAPER>
+    <ARTICLE AUTHOR="John Doe">
+        <HEADLINE>AI is Transforming Journalism</HEADLINE>
+        <BYLINE>By Suyog Gautam</BYLINE>
+        <LEAD>Artificial Intelligence is revolutionizing the way news is reported.</LEAD>
+        <BODY>AI is a crucial thing in todays world so we need to be up to date about it.</BODY>
+        <NOTES>Published on March 20, 2025</NOTES>
+    </ARTICLE>
+</NEWSPAPER>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "Hello";
+var pattern = new RegExp("/hello/","i");//incase sensitive
+var result = pattern.test(str);//test is a regex function 
+if (result){
+    document.write("valid parameter")
+}
+else{
+    document.write("invalid pattern")
+
+}
+document.write(result)
+    </script>
+<script>
+    let url = 'https://vedascollege.edu.np';
+// Creating regex object
+let re = new RegExp(/[^.]+/);//rule is: [^.]+ means "one or more non-dot characters
+let result = re.exec(url)[0];//return non dot characters
+document.write(result+"</br>");
+let result1 = re.exec(url)[0].substring(8);//return the sub string from 9
+document.write(result1);
+</script>
+</body>
+</html>

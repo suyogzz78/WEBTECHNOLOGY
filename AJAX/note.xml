@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "note.dtd"><!--linked dtd-->
+<note>
+    <to>&lt;sandy&gt;</to>
+    <from>sush</from>
+    <heading>reminder</heading>
+    <body> Meet this weekend</body>
+    <suyog/><!-- empty-->
+   
+</note>

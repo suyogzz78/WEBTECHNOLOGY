@@ -1,0 +1,21 @@
+p{
+    color:blue;
+
+}
+#bg{
+    background-color: bisque;
+
+}
+#text_color{
+    color: aquamarine;
+}
+.btn{
+    font-weight: bold;
+    font-size: 15px;
+}
+.btn-primary{
+    background-color: blueviolet;
+    color: azure;
+    padding: 20px;
+    border: 5px saddlebrown;
+}

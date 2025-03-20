@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE notes[
+<!ELEMENT notes (#PCDATA|to|from|message|body)*>
+
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ATTLIST notes id CDATA #REQUIRED>
+<!ATTLIST notes pi CDATA #FIXED "3.1415">
+]>
+<notes id="101">
+<!--these are the notes &gt; 18 years old peoples.-->
+<to>Suyog</to>
+</notes>

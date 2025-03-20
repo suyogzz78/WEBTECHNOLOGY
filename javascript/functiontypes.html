@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <h2>FIbonacci series</h2>
+    <label for="fibonum">Enter the number of terms</label>
+    <input type="text" id="fibonum">
+    <h3>the fibonacci series is</h3>
+    <p id="fiboid"></p>
+    <button onclick="FindFibo()">Find Fibonacci</button>
+</body>
+<script>
+    function FindFibo()
+    {
+        const num= document.getElementsById('fibonum').values;
+    
+    /*    document.getElementById('fiboid').innerHTML = a + " "+ b + " "*/
+       /* for(i=1;i<num;i++){
+        
+            c=a+b
+            a=b
+            b=c
+            document.getElementById('fiboid').innerHTML += c+ ""
+        }*/
+        for(i= 0;i<num; i++)
+        {
+            document.getElementById('fiboid').innerHTML +=Fibonacci(i) + " "
+        }
+    
+    }
+    function Fibonacci(n)
+    {
+        if (n==0|| n==1)
+             return n;
+        else    
+            return Fibonacci(n-1) + Fibonacci(n-2);
+    
+    }
+</script>
+
+</html>*/

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockletter</title>
+</head>
+<body>
+    <h2>enter your name(BLOCK LETTERS)</h2>
+    <input type="text" id="nameid">    
+</body>
+<script>
+    var tag =document.getElementById("nameid");
+ 
+    document.getElementById("nameid").onkeyup=changeIntoBlock;
+    function changeIntoBlock()
+    {
+        tag.value=tagvalue.toUpperCase();
+    }
+</script>
+</html>

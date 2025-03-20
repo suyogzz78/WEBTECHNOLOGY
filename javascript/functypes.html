@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h2>Fibonacci Series</h2>
+    <label for="fibonum">Enter the number of terms:</label>
+    <input type="text" id="fibonum">
+    <h3>The Fibonacci series is:</h3>
+    <p id="fiboid"></p>
+    <button onclick="FindFibo()">Find Fibonacci</button>
+</body>
+<script>
+    function FindFibo() {  // Corrected function name
+        const num = parseInt(document.getElementById('fibonum').value); // Fixed ID method and value retrieval
+        if (isNaN(num) || num < 1) {
+            document.getElementById('fiboid').innerHTML = "Please enter a valid positive number.";
+            return;
+        }
+        
+        document.getElementById('fiboid').innerHTML = ""; // Clear previous results
+
+        for (let i = 0; i < num; i++) {  // Declared 'i' properly
+            document.getElementById('fiboid').innerHTML += Fibonacci(i) + " ";
+        }
+    }
+
+    function Fibonacci(n) {
+        if (n === 0 || n === 1) return n;
+        return Fibonacci(n - 1) + Fibonacci(n - 2);
+    }
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+</head>
+<body>
+    <input type="text">
+    <button> click me</button>
+    <ul>
+        <li> First li of first ul</li>
+        <li> Second li of first ul</li>
+        <li> Third li of first ul</li>
+        <li> Fourth li of first ul</li>
+
+    </ul>
+    <ul>
+        <li> First li of second ul</li>
+        <li> Second li of second ul</li>
+        <li> Third li of second ul</li>
+        <li> Fourth li of second ul</li>
+
+    </ul>
+    <a href="abc.com" target="blank">myblogs</a>
+    <a href="abc.com">My ecommerce website</a>
+    <a href="abc.com" target="_blank"> My personal website</a>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("button").mouseenter(function(){
+               // $(this).hide(2000);
+               $("ul li:first-child").css("color","red");
+               $("a[target='_blank']").css("color","green");
+            });
+      
+        $("button").mouseleave(function(){
+               // $(this).hide(2000);
+               $("ul li:last-child").css("color","red");
+               $("a[target='_blank']").css("color","green");
+            });
+       
+        $("input").focus(function()
+        {
+            $(this).css("background","green");
+            $(this).css("color","white");
+            $(this).css("borderRadius","10%");
+
+        });
+    });
+    </script>
+</body>
+</html>

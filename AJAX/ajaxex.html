@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change the content only without the reloading the page</title>
+</head>
+
+    <body>
+        <div id="ajaxid">
+          <h2>Change This content only without reloading the page.</h2>
+        </div>
+        <button type="button" onclick="loadDoc('suyog.txt')">Change Content</button>
+        
+        <script>
+        function loadDoc(url) { //takes file as a parameter
+          var xhttpR = new XMLHttpRequest(); //request object of XMLHttpRequest()
+          xhttpR.onreadystatechange = function() { //this is for asynchronous
+            if (xhttpR.readyState == 4 && xhttpR.status == 200) { //4 means request is finished and response is ready, 200 means OK
+              document.getElementById("ajaxid").getElementsByTagName("h2")[0].innerHTML = xhttpR.responseText; //update the content
+            }
+          };
+          xhttpR.open("GET", url, true); //GET method, file URL, true for asynchronous
+          xhttpR.send(); //send the request
+        }
+        </script>
+       </body>
+       </html>

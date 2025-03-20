@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel or Consonant Checker</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type a letter">
+    <p id="result"></p>
+
+    <script>
+        $(document).ready(function(){
+            $("#textInput").keypress(function(event){
+                let char = String.fromCharCode(event.which).toLowerCase();
+                let vowels = "aeiou";
+
+                if (char.match(/[a-z]/)) {
+                    $("#result").text(vowels.includes(char) ? "Vowel" : "Consonant");
+                } else {
+                    $("#result").text("Please enter a valid letter.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <h1>Enter any value</h1>
+    <input type="text" id="vid">
+    <button>Check Input</button>
+    <p id="result"></p>
+
+</body>
+<script>
+    var btn = document.getElementsByTagName("button")[0];
+    
+    btn.onclick = function() {
+        var inval = document.getElementById("vid").value;  
+        checkVal(inval);
+    };
+
+    function checkVal(value) {
+        try {
+            if (value == "") throw "EmptyException";
+            else if (isNaN(value)) throw "NotANumberException";
+            else if (value > 1000) throw "TooLargeException";
+            else if (value < 5) throw "TooSmallException";  
+            else {
+                document.getElementById("result").innerText = "Valid value: " + value;
+                return;
+            }
+        } catch (exception) {
+            document.getElementById("result").innerText = "Exception: " + exception;
+        }
+    }
+</script>
+</html>

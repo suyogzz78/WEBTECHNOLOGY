@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dialog box</title>
+</head>
+<body>
+    <script>
+        continueloop= true;
+        do{
+            var age =prompt("enter your age ","0");
+            if (age>=18)
+            {
+            var con=confirm("do you wish to continue");
+        
+            if (con)
+                 {
+                    alert("you voted successfully");
+                    continueloop =false;
+
+                 }   
+                 else{
+                }
+                alert("you cancelled voting");
+            }
+                else{
+                    alert("enter valid age for voting");
+                    continueloop= true;
+                }
+            }
+        while (continueloop);
+    </script>
+</body>
+</html>

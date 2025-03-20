@@ -1,0 +1,33 @@
+<studentinfo>
+    <student program="csit">
+        <sno>1</sno>
+        <roll>100</roll>
+        <name>Suyog</name>
+        <contact>100000000</contact>
+        <semester>5</semester>
+        <batch>2079</batch>
+        <dob>my date of birth is <date type="BS">2050</date></dob>
+
+    </student> 
+    <student program="bca">
+        <sno>2</sno>
+        <roll>101</roll>
+        <name>Kshitiz</name>
+        <contact>100000001</contact>
+        <semester>5</semester>
+        <batch>2079</batch>
+        <program>csit</program>
+
+    </student>
+    <student program="bbm">
+        <sno>3</sno>
+        <roll>102</roll>
+        <name>Kapil</name>
+        <contact>100000002</contact>
+        <semester>5</semester>
+        <batch>2079</batch>
+        <program>csit</program>
+
+    </student>
+
+</studentinfo>

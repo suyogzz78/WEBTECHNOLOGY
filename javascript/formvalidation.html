@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Form Validation</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 50px;
+}
+form {
+  max-width: 300px;
+  margin: auto;
+}
+input[type="text"], input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+</style>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+<form name="myForm" action="formvalidation.html" onsubmit="return validateForm()" method="get">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

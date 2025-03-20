@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+p.test1 {
+    white-space: wrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+p.test2 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+p.test1:hover {
+    overflow: visible;
+    }
+    p {
+word-wrap: break-word;
+}
+p.test1 {
+word-break: keep-all;
+}
+p.test2 {
+word-break: break-all;
+}
+p.test1 {
+writing-mode: vertical-lr;
+}
+span.test2 {
+writing-mode: vertical-rl;
+}
+p.test2 {
+writing-mode: vertical-rl;
+}
+@media only screen and (max-width: 600px) {
+body {
+background-color: lightblue;
+}
+}
+
+</style>
+<body>
+    <p class="test1">this is a test1 contents. And I would like to thank you for being here.</p>
+    <p class="test2">this is a test2 contents. And I would like to thank you for being here</p>
+    
+</body>
+</html>

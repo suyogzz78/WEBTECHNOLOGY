@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;} 
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+    div.radius {
+    border: 2px solid rgb(115, 0, 255);
+    padding: 10px;
+    border-radius: 5% 5% 7%
+    }
+    .btnrad{
+        border: 3px solid rgb(160, 9, 231);
+        border-radius: 0% 60% 0% 60%
+    }
+    
+   
+    </style>
+<body>
+    <button class="btnrad">Login</button>
+    <br>
+    <div class="radius">
+    <p class="dotted">this is a dotted order</p>
+    <p class="dashed">this a dashed order</p>
+    <p class="solid">this is a solid order</p>
+    <p class="double">this a double order </p>
+    <p class="groove">this a groove order</p>
+    <p class="ridge">this is a ridge order</p>
+    <p class="inset">this is a inset order</p>
+    <p class="outset">this is a outset order</p>
+    <p class="mix">this is a mixed order</p>
+</div>
+</body>
+</html>

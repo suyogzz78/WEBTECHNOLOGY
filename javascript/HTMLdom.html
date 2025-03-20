@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLDOM</title>
+
+</head>
+<body>
+    <!--document.getElementById("idname")-->
+     <!--document.getElementByTagName("Tagname")-->
+      <!--document.getElementByClassname("Classname")-->
+      <div>
+        <p id="colorid" onmouseover="changeColor()">My text color going to change</p>
+        <p>i am first paragraph</p>
+        <p>i am second paragraph</p>
+        <p>i am third paragraph</p>
+        <p>i am fourth paragraph</p>
+
+      </div>
+      <script>
+            var x =document.getElementById("colorid");
+            function changeColor(){
+                x.style.color="red";
+            }
+            var y= document.getElementsByTagName("p");
+            for (i=1;i<y.length;i++)
+            y[i].style.color="green";
+            var z= document.getElementsByClassName("abc");
+            for(i=0;i<z.length;i++)
+            z[i].style.fontsize ="30px";
+
+
+      </script>
+</body>
+</html>

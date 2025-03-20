@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Handling</title>
+</head>
+<body>
+    <h2>Cookie Handling</h2>
+    <input type="text" name="username" id="uid">
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">get Cookie</button>
+    <button onclick="deleteCookie()">delete Cookie</button>
+
+    <script>
+        function setCookie() {
+            var uname = document.getElementById("uid").value; // Get input value on button click
+            if (uname === "") {
+                alert("Please enter a username before setting a cookie.");
+                return;
+            }
+
+            var d = new Date();
+            d.setTime(d.getTime() + (24 * 60 * 60 * 1000)); // Expires in 1 day
+            var expires = "expires=" + d.toGMTString();
+            
+            document.cookie = "username=" + uname + "; " + expires + "; path=/";
+            alert("Cookie '" + uname + "' is set");
+        }
+        function getCookie(){
+            var ck=document.cookie;
+            var cks=ck.split(" ");
+            document.write("the cookies are <br>");
+            document.write("<ol>");
+            for(i=0;i<cks.length;i++)
+        {
+           document.write("<li>"+cks[i]+"</li>");
+            
+        }
+        document.write("<\ol>");
+        }
+        function deleteCookie()
+        {
+            var uname = document.getElementById("uid").value; // Get input value on button click
+            if (uname === "") {
+                alert("Please enter a username before setting a cookie.");
+                return;
+            }
+
+            var d = new Date();
+            d.setTime(d.getTime() - (24 * 60 * 60 * 1000)); // Expires in 1 day
+            var expires = "expires=" + d.toGMTString();
+            
+            document.cookie = "username=" + uname + "; " + expires + "; path=/";
+            alert("Cookie '" + uname + "' is set");
+        }
+    </script>
+</body>
+</html>
