@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #4498ad, #0e8bc9);
+            font-family: Arial, sans-serif;
+            margin: 10%;
+        }
+        .registration-form {
+            background: rgba(232, 229, 229, 0.919);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .registration-form h2 {
+            text-align: center;
+            color: #21b7f7;
+        }
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"],
+        .registration-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #060505;
+            border-radius: 5px;
+        }
+        .registration-form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .registration-form .create-account {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(to right, #2cc5ef, #0072ff);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .registration-form .create-account:hover {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+        }
+        .registration-form .signin {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .registration-form .signin a {
+            color: #1baef8;
+            text-decoration: none;
+        }
+        .registration-form .signin a:hover {
+            text-decoration: underline;
+            color: #2770ee;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms["regForm"]["name"].value;
+            var email = document.forms["regForm"]["email"].value;
+            var country = document.forms["regForm"]["country"].value;
+            var phone = document.forms["regForm"]["phone"].value;
+            var password = document.forms["regForm"]["password"].value;
+            var terms = document.forms["regForm"]["terms"].checked;
+
+            if (name == "" || email == "" || country == "" || phone == "" || password == "" || !terms) {
+                alert("All fields must be filled out and terms must be agreed.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            if (!validatePhone(phone)) {
+                alert("Invalid phone number format");
+                return false;
+            }
+
+            return true;
+        }
+
+       
+    </script>
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+        <form name="regForm" action="congo.html" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+            <input type="text" name="country" placeholder="Country" required>
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div>
+                <input type="checkbox" name="terms" required>
+                <label for="terms">I agree to the terms and conditions.</label>
+            </div>
+            <button type="submit" class="create-account">CREATE ACCOUNT</button>
+        </form>
+        <div class="signin">
+            Already have an account? <a href="signin.html">Sign in</a>
+        </div>
+    </div>
+</body>
+</html>

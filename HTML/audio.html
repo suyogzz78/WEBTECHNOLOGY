@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls>
+        <source src="funny.mp3" type="audio/mpeg">
+    </audio>
+ <!-- <video width="400" controls>
+        <source src="">
+-->   
+<canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;background-color: rgb(242, 247, 247);"></canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(500, 700); 
+    ctx.stroke();
+    //for circle
+    ctx.beginPath();
+    ctx.arc(200,100,50,0,2*Math.PI);
+    ctx.stroke();
+
+    ctx.fillStyle = "aqua"; // You can change the color to whatever you like
+     ctx.fillRect(400, 400, 300, 150);
+
+</script>
+<button onclick="getElementByID('demo').innerHTML=Date()">What is the time?</button>
+
+    
+ </canvas>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background: linear-gradient(to right,rgb(117, 117, 203),rgb(21, 21, 206));
+    height: 100vh;
+    padding: 5%;
+
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="tel"]
+{
+     width: 100%;
+     padding: 10px;
+     height: 10%;
+     margin: 5px;
+     border: 1px solid #060505;
+     border-radius: 5px; 
+     
+}
+.registration-form label{
+    width: 100%;
+     padding: 10px;
+     height: 10%;
+     margin: 5px;
+}
+
+.container{
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+.registration-form{
+  
+    background: rgba(232, 229, 229, 0.919);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+   
+
+}

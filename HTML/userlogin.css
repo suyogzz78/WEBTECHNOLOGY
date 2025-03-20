@@ -1,0 +1,67 @@
+      body {
+            background-color: #8B0000; /* Dark Red */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #FFD700; /* Golden Yellow */
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: black;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            background-color: #D00000; /* Bright Red */
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        label {
+            color: black;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            background-color: #FFEE99; /* Light Yellow */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #FFD700; /* Golden Yellow */
+            border: 2px solid black;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #E6C200; /* Slightly Darker Yellow */
+        }
