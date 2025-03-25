@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            background-size: cover;
+            background-position: center;
+          
+        }
+    </style>
+    <script>
+        function changeBackground() {
+            // Get a random image from the Unsplash collection
+            document.body.style.backgroundImage = "url('https://picsum.photos/1920/1080')";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeBackground()">Change Background</button>
+</body>
+</html>

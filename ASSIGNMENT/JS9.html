@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>JSON.parse() and JSON.stringify()</h2>
+<p id="demo"></p>
+
+<script>
+const txt = '{"name":"John", "age":30, "city":"New York"}'; // JSON string
+
+const obj = JSON.parse(txt); // Convert to JS object
+
+const myJSON = JSON.stringify(obj); // Convert back to JSON string
+
+// Display both parsed values and JSON string
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age + ", " + obj.city + "<br>" + myJSON;
+</script>
+
+
+
+</body>
+</html>

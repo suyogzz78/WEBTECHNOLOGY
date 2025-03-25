@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Show/Hide Example</title>
+    <!-- Include the latest version of jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Hide element by element selector
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            // Hide element by ID selector
+            $("#hideButton").click(function(){
+                $("#message").hide();
+            });
+
+            // Hide element by class selector
+            $(".hideClass").click(function(){
+                $(".messageClass").hide();
+            });
+
+            // Show element by ID selector
+            $("#showButton").click(function(){
+                $("#message").show();
+            });
+
+            // Show element by class selector
+            $(".showClass").click(function(){
+                $(".messageClass").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Click on any of the elements below to hide/show</h2>
+
+    <!-- Example using element selector -->
+    <p>Click me to hide!</p>
+
+    <!-- Example using ID selector -->
+    <button id="hideButton">Hide Message by ID</button>
+    <p id="message">This message can be hidden or shown by clicking buttons.</p>
+
+    <!-- Example using class selector -->
+    <button class="hideClass">Hide Message by Class</button>
+    <p class="messageClass">This is another message that can be hidden or shown.</p>
+
+    <!-- Show buttons -->
+    <button id="showButton">Show Message by ID</button>
+    <button class="showClass">Show Message by Class</button>
+</body>
+</html>

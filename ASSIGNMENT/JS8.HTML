@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Event Examples</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 1. click() event
+            $("#clickButton").click(function(){
+                alert("Button clicked!");
+            });
+
+            // 2. dblclick() event
+            $("#dblClickButton").dblclick(function(){
+                alert("Button double-clicked!");
+            });
+
+            // 3. mouseenter() event
+            $("#mouseenterDiv").mouseenter(function(){
+                $(this).css("background-color", "lightblue");
+                $(this).text("Mouse entered!");
+            });
+
+            // 4. mouseleave() event
+            $("#mouseenterDiv").mouseleave(function(){
+                $(this).css("background-color", "lightgray");
+                $(this).text("Mouse left!");
+            });
+
+            // 5. focus() event
+            $("#textInput").focus(function(){
+                $(this).css("border", "2px solid green");
+                $(this).attr("placeholder", "You are typing here...");
+            });
+        });
+    </script>
+    <style>
+        #mouseenterDiv {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: lightgray;
+        }
+        #textInput {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Click Event -->
+    <button id="clickButton">Click Me</button>
+
+    <!-- 2. Double Click Event -->
+    <button id="dblClickButton">Double Click Me</button>
+
+    <!-- 3. Mouse Enter/Leave Event -->
+    <div id="mouseenterDiv">Hover over me!</div>
+
+    <!-- 4. Focus Event -->
+    <input type="text" id="textInput" placeholder="Focus on me!" />
+</body>
+</html>

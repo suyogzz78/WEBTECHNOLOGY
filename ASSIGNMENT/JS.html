@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Box Examples</title>
+    <script>
+        // Alert Dialog
+        function showAlert() {
+            alert("This is an alert dialog!");
+        }   
+
+        // Confirm Dialog
+        function showConfirm() {
+            const result = confirm("Do you want to proceed?");
+            if (result) {
+                alert("You clicked OK!");
+            } else {
+                alert("You clicked Cancel!");
+            }
+        }
+
+        // Prompt Dialog
+        function showPrompt() {
+            const name = prompt("What is your name?");
+            if (name != null) {
+                alert("Hello, " + name + "!");
+            }
+        }
+
+        // Multiply two numbers using prompt
+        function multiplyNumbers() {
+            const num1 = parseInt(prompt("Enter the first number:"));
+            const num2 = parseInt(prompt("Enter the second number:"));
+            const result = num1 * num2;
+            alert("The result of multiplication is: " + result);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+    <button onclick="multiplyNumbers()">Multiply Numbers</button>
+</body>
+</html>
+    

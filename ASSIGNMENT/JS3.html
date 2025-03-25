@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in JavaScript Objects</title>
+</head>
+<body>
+    <h1>JavaScript Built-in Objects Demo</h1>
+    
+    <!-- Window Object -->
+    <h2>Window Object</h2>
+    <p id="windowSize"></p>
+    <button onclick="showWindowSize()">Show Window Size</button>
+
+    <!-- String Object -->
+    <h2>String Object</h2>
+    <p id="stringDemo"></p>
+
+    <!-- Number Object -->
+    <h2>Number Object</h2>
+    <p id="numberDemo"></p>
+
+    <!-- Boolean Object -->
+    <h2>Boolean Object</h2>
+    <p id="booleanDemo"></p>
+
+    <!-- Date Object -->
+    <h2>Date Object</h2>
+    <p id="dateDemo"></p>
+
+    <!-- Math Object -->
+    <h2>Math Object</h2>
+    <p id="mathDemo"></p>
+
+    <!-- RegExp Object -->
+    <h2>Regular Expression (RegExp) Object</h2>
+    <p id="regexDemo"></p>
+
+    <!-- Form Object -->
+    <h2>Form Object</h2>
+    <form name="userForm">
+        <label>Enter Name:</label>
+        <input type="text" name="username">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="formDemo"></p>
+
+    <script>
+        // Window Object
+        function showWindowSize() {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            document.getElementById("windowSize").innerHTML = "Window Width: " + width + "px, Height: " + height + "px";
+        }
+
+        // String Object
+        let str = "JavaScript is powerful!";
+        let charAt2 = str.charAt(2);
+        let upperStr = str.toUpperCase();
+        document.getElementById("stringDemo").innerHTML = "Original String: " + str + "<br> Character at index 2: " + charAt2 + "<br> Uppercase: " + upperStr;
+
+        // Number Object    
+        let num = new Number(123.456);
+        let fixedNum = num.toFixed(2);
+        document.getElementById("numberDemo").innerHTML = "Original Number: " + num + "<br> Fixed to 2 decimal places: " + fixedNum;
+
+        // Boolean Object
+        let bool1 = new Boolean(5 > 2);
+        let bool2 = new Boolean(0);
+        document.getElementById("booleanDemo").innerHTML = "Boolean (5 > 2): " + bool1 + "<br> Boolean (0): " + bool2;
+
+        // Date Object
+        let today = new Date();
+        document.getElementById("dateDemo").innerHTML = "Current Date: " + today.toDateString() + "<br> Time: " + today.toLocaleTimeString();
+
+        // Math Object
+        let sqrt16 = Math.sqrt(16);
+        let piValue = Math.PI;
+        document.getElementById("mathDemo").innerHTML = "Square Root of 16: " + sqrt16 + "<br> PI Value: " + piValue;
+
+        // RegExp Object
+        let regex = /JavaScript/i;
+        let testString = "I love JavaScript!";
+        let isMatch = regex.test(testString);
+        document.getElementById("regexDemo").innerHTML = "Does the string 'I love JavaScript!' contain 'JavaScript'? " + isMatch;
+
+        // Form Object
+        let formName = document.forms["userForm"].name;
+        document.getElementById("formDemo").innerHTML = "Form Name: " + formName;
+    </script>
+</body>
+</html>

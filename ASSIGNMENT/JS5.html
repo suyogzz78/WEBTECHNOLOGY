@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin:90px;
+            background-color: bisque;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let name = document.forms["userForm"]["name"].value;
+            let email = document.forms["userForm"]["email"].value;
+            let phone = document.forms["userForm"]["phone"].value;
+            let address = document.forms["userForm"]["address"].value;
+            let country = document.forms["userForm"]["country"].value;
+
+            // Name validation
+            if (name.trim() === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            // Email validation (basic format check)
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Phone number validation (only digits, 10-15 characters)
+            let phonePattern = /^[0-9]{10,15}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number (10-15 digits)");
+                return false;
+            }
+
+            // Address validation
+            if (address.trim() === "") {
+                alert("Address must be filled out");
+                return false;
+            }
+
+            // Country validation
+            if (country === "") {
+                alert("Please select a country");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form name="userForm" action="/submit" onsubmit="return validateForm()" method="post">
+        <label>Name:</label>
+        <input type="text" name="name"><br><br>
+
+        <label>Email:</label>
+        <input type="text" name="email"><br><br>
+
+        <label>Phone:</label>
+        <input type="text" name="phone"><br><br>
+
+        <label>Address:</label>
+        <input type="text" name="address"><br><br>
+
+        <label>Country:</label>
+        <select name="country">
+            <option value="">Select Country</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="NEPAL">NEPAL</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in JavaScript</title>
+    <script>
+        class Car {
+            constructor(brand, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+            displayInfo() {
+                return `Car: ${this.brand} ${this.model}, Year: ${this.year}`;
+            }
+        }
+
+        function showCar() {
+            let car1 = new Car("Toyota", "Camry", 2022);
+            document.getElementById("output").innerText = car1.displayInfo();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showCar()">Show Car Details</button>
+    <p id="output"></p>
+</body>
+</html>

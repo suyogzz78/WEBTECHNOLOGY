@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Operations</title>
+    <script>
+        // Function to set a cookie
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000)); // Set expiration date
+            var expires = "expires=" + d.toUTCString(); // Format the expiration date
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"; // Set cookie
+            alert("Cookie '" + cname + "' with value '" + cvalue + "' is set for " + exdays + " days.");
+        }
+
+        // Function to get a cookie by name 
+        function getCookie(cname) {
+            var name = cname + "="; // Format the cookie name
+            var decodedCookie = decodeURIComponent(document.cookie); // Decode cookies
+            var ca = decodedCookie.split(';'); // Split cookies into an array
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i].trim(); // Remove leading/trailing spaces
+                if (c.indexOf(name) === 0) { // Check if the cookie starts with the desired name
+                    return c.substring(name.length, c.length); // Return cookie value
+                }
+            }
+            return ""; // If cookie not found
+        }
+
+        // Function to check if a specific cookie exists
+        function checkCookie(cname) {
+            var cookieValue = getCookie(cname); // Get cookie value
+            if (cookieValue != "") {
+                alert("Cookie '" + cname + "' exists with value: " + cookieValue); // If cookie exists
+            } else {
+                alert("No cookie named '" + cname + "' found."); // If cookie doesn't exist
+            }
+        }
+
+        // Function to delete a cookie
+        function deleteCookie(cname) {
+            var cookieValue = getCookie(cname); // Get current cookie value
+            if (cookieValue != "") {
+                document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/"; // Set expiration date to a past date
+                alert("Cookie '" + cname + "' is deleted.");
+            } else {
+                alert("Cookie '" + cname + "' does not exist.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Cookie Operations</h2>
+    
+    <!-- Set Cookie Button -->
+    <button onclick="setCookie('username', 'Suyog Gautam', 7)">Set Cookie</button>
+    <br><br>
+
+    <!-- Get Cookie Button -->
+    <button onclick="alert(getCookie('username'))">Get Cookie </button>
+    <br><br>
+
+    <!-- Check Cookie Button -->
+    <button onclick="checkCookie('username')">Check if Cookie 'username' Exists</button>
+    <br><br>
+
+    <!-- Delete Cookie Button -->
+    <button onclick="deleteCookie('username')">Delete Cookie 'username'</button>
+
+</body>
+</html>
